@@ -40,6 +40,7 @@ const upload = multer({
 */
 const users = require('./routes/usersRoutes');
 const categories = require('./routes/categoriesRoutes');
+const donations = require('./routes/donationsRoutes');
 const products = require('./routes/productsRoutes');
 const address = require('./routes/addressRoutes');
 const orders = require('./routes/ordersRoutes');
@@ -72,10 +73,11 @@ users(app, upload);
 categories(app, upload);
 address(app);
 orders(app);
+donations(app, upload);
 products(app, upload);
 mercadoPagoRoutes(app);
 
-server.listen(3000, '192.168.0.4' || 'localhost', function() {
+server.listen(3000, '192.168.0.5' || 'localhost', function() {
     console.log('Aplicacion de NodeJS ' + port + ' Iniciada...')
 });
 
