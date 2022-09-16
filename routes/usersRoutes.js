@@ -10,7 +10,7 @@ module.exports = (app, upload) => {
     app.get('/api/users/getAdminsNotificationTokens', passport.authenticate('jwt', {session: false}), UsersController.getAdminsNotificationTokens);
 
     // GUARDAR DATOS
-    app.post('/api/users/create', upload.array('image', 1), UsersController.registerWithImage);
+    app.post('/api/users/create', upload.array('image', 1), UsersController.registerWithImage); 
     app.post('/api/users/login', UsersController.login);
     app.post('/api/users/logout', UsersController.logout);
 

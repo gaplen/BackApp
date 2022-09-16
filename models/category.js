@@ -8,6 +8,7 @@ Category.getAll = () => {
         SELECT
             id,
             name,
+            image,
             description
         FROM
             categories
@@ -24,14 +25,16 @@ Category.create = (category) => {
     INSERT INTO
         categories(
             name,
+            image,
             description,
             created_at,
             updated_at
         )
-    VALUES ($1, $2, $3, $4) RETURNING id
+    VALUES ($1, $2, $3, $4, $5) RETURNING id
     `;
     return db.oneOrNone(sql, [
         category.name,
+        category.image,
         category.description,
         new Date(),
         new Date()
