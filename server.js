@@ -77,7 +77,7 @@ donations(app, upload);
 products(app, upload);
 mercadoPagoRoutes(app);
 
-server.listen(3000, '192.168.0.6' || 'localhost', function() {
+server.listen(3000, '192.168.0.2' || 'localhost', function() {
     console.log('Aplicacion de NodeJS ' + port + ' Iniciada...')
 });
 

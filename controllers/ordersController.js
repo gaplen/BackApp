@@ -75,8 +75,8 @@ module.exports = {
             console.log('LA ORDEN SE CREO CORRECTAMENTE');
 
             // RECORRER TODOS LOS PRODUCTOS AGREGADOS A LA ORDEN
-            for (const product of order.products) {
-                await OrderHasProduct.create(data.id, product.id, product.quantity);
+            for (const donations of order.donations) {
+                await OrderHasProduct.create(data.id, donations.id, donations.quantity);
             }
 
             return res.status(201).json({

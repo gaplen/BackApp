@@ -87,6 +87,7 @@ CREATE TABLE categories (
 );
 
 
+
 DROP TABLE IF EXISTS products CASCADE;
 CREATE TABLE products(
 	id BIGSERIAL PRIMARY KEY,
