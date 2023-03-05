@@ -4,7 +4,7 @@
   "description": "Backend app",
   "main": "server.js",
   "scripts": {
-    "start": "Backend app"
+    "start": "Backendapp"
     "test": "echo \"Error: no test specified\" && exit 1"
     
   },
